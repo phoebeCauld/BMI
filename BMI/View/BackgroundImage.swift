@@ -15,5 +15,12 @@ class BackgroundImage: UIImageView {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
+    
+    let resultViewBackground: UIImageView = {
+        let imageView = UIImageView(frame: UIScreen.main.bounds)
+        imageView.image = UIImage(named: "resultViewBackground")
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
 
 }
