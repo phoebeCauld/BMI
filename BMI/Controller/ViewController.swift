@@ -30,9 +30,12 @@ class ViewController: UIViewController {
         }
     
         @objc func calculateButtonTapped(_ sender: UIButton){
-          calculateLogic.calculateBMI(setView.heightSlider.slider.value, setView.weightSlider.slider.value)
+        calculateLogic.calculateBMI(setView.heightSlider.slider.value, setView.weightSlider.slider.value)
+            
             let secondVC = ResultViewController()
             secondVC.result = calculateLogic.getBmiValue()
+            secondVC.advice = calculateLogic.getAdvice()
+            secondVC.color = calculateLogic.getBackgroundColor()
             present(secondVC, animated: true, completion: nil)
         }
 
