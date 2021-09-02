@@ -21,7 +21,7 @@
 		2DC3AA8426DD401600A1976B /* CalculateLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3AA8326DD401600A1976B /* CalculateLogic.swift */; };
 		2DC3AA8626DFCCB700A1976B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3AA8526DFCCB700A1976B /* ResultViewController.swift */; };
 		2DC3AA8826DFCE3000A1976B /* ConfigResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3AA8726DFCE3000A1976B /* ConfigResultView.swift */; };
-		2DC3AA8A26DFFC8400A1976B /* ResultOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3AA8926DFFC8400A1976B /* ResultOperations.swift */; };
+		2DC3AA8C26E09C8800A1976B /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3AA8B26E09C8800A1976B /* BMI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		2DC3AA8326DD401600A1976B /* CalculateLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateLogic.swift; sourceTree = "<group>"; };
 		2DC3AA8526DFCCB700A1976B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		2DC3AA8726DFCE3000A1976B /* ConfigResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigResultView.swift; sourceTree = "<group>"; };
-		2DC3AA8926DFFC8400A1976B /* ResultOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOperations.swift; sourceTree = "<group>"; };
+		2DC3AA8B26E09C8800A1976B /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				2DC3AA7F26DD344100A1976B /* Sliders.swift */,
+				2DC3AA8B26E09C8800A1976B /* BMI.swift */,
 				2DC3AA7D26DD2EE300A1976B /* Labels.swift */,
 				2DC3AA8126DD3D9400A1976B /* Buttons.swift */,
-				2DC3AA8926DFFC8400A1976B /* ResultOperations.swift */,
 				2DC3AA8326DD401600A1976B /* CalculateLogic.swift */,
 			);
 			path = Model;
@@ -196,10 +196,10 @@
 				2DC3AA8626DFCCB700A1976B /* ResultViewController.swift in Sources */,
 				2DC3AA8426DD401600A1976B /* CalculateLogic.swift in Sources */,
 				2DC3AA7E26DD2EE300A1976B /* Labels.swift in Sources */,
-				2DC3AA8A26DFFC8400A1976B /* ResultOperations.swift in Sources */,
 				2DC3AA8826DFCE3000A1976B /* ConfigResultView.swift in Sources */,
 				2DC3AA8026DD344100A1976B /* Sliders.swift in Sources */,
 				2DC3AA8226DD3D9400A1976B /* Buttons.swift in Sources */,
+				2DC3AA8C26E09C8800A1976B /* BMI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -78,9 +78,6 @@ class ConfigView: UIView {
             heightLabelStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
             heightLabelStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10)
         ])
-        
-        
     }
-
-
 }
+

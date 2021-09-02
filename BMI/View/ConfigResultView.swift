@@ -10,10 +10,10 @@ import UIKit
 class ConfigResultView: UIView {
     
     let backgroundImage = BackgroundImage()
-    let topLabel = Labels(text: "YOUR RESULT", textColor: .white, font: .boldSystemFont(ofSize: 30), textAlignment: .center)
-    let resultLabel = Labels(text: "100", textColor: .white, font: .boldSystemFont(ofSize: 80), textAlignment: .center)
-    let bottomLabel = Labels(text: "eat more carrot", textColor: .white, font: .boldSystemFont(ofSize: 20), textAlignment: .center)
-    let recalculateButton = Buttons(title: "RECALCULATE", font: .boldSystemFont(ofSize: 25))
+    let topLabel = Labels(text: Text.topLabel, textColor: .white, font: .boldSystemFont(ofSize: 30), textAlignment: .center)
+    let resultLabel = Labels(text: Text.resultLabel, textColor: .white, font: .boldSystemFont(ofSize: 80), textAlignment: .center)
+    let adviceLabel = Labels(text: Text.adviceLabel, textColor: .white, font: .boldSystemFont(ofSize: 20), textAlignment: .center)
+    let recalculateButton = Buttons(title: Text.recalcButton, font: .boldSystemFont(ofSize: 25))
     
     func configuration(_ view: UIView){
         addSubview(view)
@@ -28,17 +28,21 @@ class ConfigResultView: UIView {
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            stackView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.3),
-            stackView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.5),
+            stackView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor,
+                                              multiplier: Constants.heightForStackView),
+            stackView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor,
+                                             multiplier: Constants.widthForStackView),
             recalculateButton.button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             recalculateButton.button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            recalculateButton.button.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
-            recalculateButton.button.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.07)
+            recalculateButton.button.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor,
+                                                            multiplier: Constants.widthForButtons),
+            recalculateButton.button.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor,
+                                                             multiplier: Constants.heightForButtons)
         ])
     }
     
     func configStackView(_ view: UIView) -> UIStackView {
-        let resultStackView = UIStackView(arrangedSubviews: [topLabel.label, resultLabel.label,bottomLabel.label])
+        let resultStackView = UIStackView(arrangedSubviews: [topLabel.label, resultLabel.label,adviceLabel.label])
         view.addSubview(resultStackView)
         resultStackView.translatesAutoresizingMaskIntoConstraints = false
         resultStackView.axis = .vertical
@@ -46,3 +50,17 @@ class ConfigResultView: UIView {
         return resultStackView
     }
 }
+private enum Text {
+    static let topLabel: String = "YOUR RESULT"
+    static let resultLabel: String = ""
+    static let adviceLabel: String = "watch your health"
+    static let recalcButton: String = "RECALCULATE"
+}
+
+private enum Constants {
+    static let heightForStackView: CGFloat = 0.3
+    static let widthForStackView: CGFloat = 0.5
+    static let widthForButtons: CGFloat = 0.9
+    static let heightForButtons: CGFloat = 0.07
+}
+
